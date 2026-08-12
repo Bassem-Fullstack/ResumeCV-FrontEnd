@@ -23,11 +23,11 @@ return (
 
   <SecondSection/>
 
-     <ResumWorks/>
+   <ResumWorks/>
 
-    <Comments/>
+     <Comments/>
 
-     </AuthCheck>
+    </AuthCheck>
   
 </>
     

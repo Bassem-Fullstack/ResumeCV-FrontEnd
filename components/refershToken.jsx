@@ -7,8 +7,7 @@ export default function AuthCheck({ children }) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    api
-      .post("/users/refershToken", {}, { withCredentials: true })
+    api.post("/users/refreshToken", {}, { withCredentials: true })
       .then((res) => {
         setAccessToken(res.data.accessToken);
       })

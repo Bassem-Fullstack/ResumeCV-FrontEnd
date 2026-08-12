@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 
-import  api, { setAccessToken }  from '@/lib/api';
+import  api from '@/lib/api';
 import { useRouter } from "next/navigation";
 import { Eye, EyeOff } from "lucide-react";
 
