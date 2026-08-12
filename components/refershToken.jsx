@@ -1,27 +1,36 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import api, { setAccessToken } from "@/lib/api";
 
 export default function AuthCheck({ children }) {
   const [loading, setLoading] = useState(true);
+  const called = useRef(false); // لمنع تكرار الطلب مرتين في React 18+
 
   useEffect(() => {
-    api.post("/users/refreshToken", {}, { withCredentials: true })
+    if (called.current) return;
+    called.current = true;
+
+    api.post("/users/refreshToken")
       .then((res) => {
+        console.log("Refresh success:", res.data);
         setAccessToken(res.data.accessToken);
       })
-      .catch(() => {
+      .catch((err) => {
+        console.error("Refresh failed:", err.response?.data || err.message);
         setAccessToken(null);
       })
       .finally(() => {
-        setLoading(false); // وقف حالة التحميل بعد انتهاء الطلب
+        setLoading(false);
       });
   }, []);
 
-  // انتظر ولا تعرض الصفحة حتى ينتهي طلب التوكن
   if (loading) {
-    return null; // أو يمكنك وضع شاشة تحميل (Spinner)
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-slate-900 text-white text-2xl">
+        Loading Auth Status...
+      </div>
+    );
   }
 
   return <>{children}</>;
