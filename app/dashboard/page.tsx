@@ -150,7 +150,7 @@ console.error("Failed to delete resume", err);
   return (
     <AuthCheck>
 
-      <div className="w-full mb-14 bg-gradient-to-r from-purple-600 to-orange-300">
+      <div className="w-full mb-14 bg-gradient-to-r from-purple-600 to-orange-300 overflow-hidden">
 
      <motion.nav className="flex items-center justify-between max-w-7xl mx-auto px-4 md:px-12 py-3.5 text-slate-800"
      
@@ -172,12 +172,12 @@ viewport={{once : true}}
 
       </div>
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2 sm:gap-4">
 
 
        <p className="text-md font-bold text-gray-100"> Hi , <span className="text-gray-800">{userName} </span></p>
        
-       <button onClick={handleLogout} className="bg-red-600 hover:bg-red-700 text-gray-100 transition-all  px-7 py-1.5 rounded-full ">
+       <button onClick={handleLogout} className="bg-red-600 hover:bg-red-700 text-gray-100 transition-all  px-4 sm:px-7 py-1.5 rounded-full ">
 
         Logout
        </button>
