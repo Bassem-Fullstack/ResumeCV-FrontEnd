@@ -4,30 +4,34 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @media print {
-  /* 1. إخفاء وإلغاء أي ألوان خلفية للمستند بالكامل */
   html, body {
     background: white !important;
     background-color: white !important;
     margin: 0 !important;
     padding: 0 !important;
+    height: auto !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
 
-  /* 2. ضبط هوامش الورقة */
   @page {
     size: A4 portrait;
-    margin: 0; /* صفحة كاملة بيضاء بدون هوامش متصفح رمادية */
+    margin: 0;
   }
 
-  /* 3. إخفاء كافة الحاويات العلوية أو الحواف الخارجية */
   .min-h-screen {
     background: white !important;
     padding: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
   }
 
-  /* 4. ضبط الـ CV ليملأ الورقة بأسلوب نظيف ورسمي */
+  .pb-6 {
+    padding-bottom: 0 !important;
+  }
+
   .cv-template {
     width: 100% !important;
     max-width: 100% !important;
@@ -38,13 +42,12 @@
     border: none !important;
     margin: 0 auto !important;
     background-color: white !important;
-    
-    /* هوامش داخلية متناسقة للـ CV من الداخل فقط */
+
     padding-top: 1cm !important;
     padding-bottom: 0.6cm !important;
     padding-left: 0.8cm !important;
     padding-right: 0.8cm !important;
-    
+
     overflow: hidden !important;
     page-break-after: avoid !important;
     page-break-inside: avoid !important;
@@ -55,7 +58,6 @@
     break-inside: avoid !important;
   }
 
-  /* 5. أحجام النصوص والمسافات الداخلية */
   .cv-template h1 { 
     font-size: 1.6rem !important; 
     margin-bottom: 6px !important; 
