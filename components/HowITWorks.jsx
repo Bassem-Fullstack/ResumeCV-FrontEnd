@@ -23,13 +23,13 @@ return(
 
         transition={ { duration : 0.62 , ease : "easeOut" } }
         
-        viewport={{amount : 0.28}}
+        viewport={{amount : 0.28 , once : true}}
   
   >
     <h2 className="text-5xl font-extrabold tracking-tight leading-tight text-center text-purple-500">
-      How <span className="bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-transparent bg-clip-text">Resum</span> Works
+      How <span className="bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-transparent bg-clip-text">Resum</span> <span className="text-gray-900">Works</span>
     </h2>
-    <p className="text-center text-gray-300 text-base leading-relaxed mt-4">
+    <p className="text-center text-gray-500 text-base leading-relaxed mt-4">
       Create a professional resume in just three steps.
     </p>
   </motion.div>
@@ -42,7 +42,7 @@ return(
 
         transition={ { duration : 0.72 , ease : "easeOut" } }
         
-        viewport={{amount : 0.28}}
+        viewport={{amount : 0.28  , once :true}}
   
   >
 
@@ -50,8 +50,8 @@ return(
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-white font-bold text-lg">
         1
       </div>
-      <h4 className="text-white font-semibold text-lg">Enter Your Details</h4>
-      <p className="text-gray-400 text-sm leading-relaxed">
+      <h4 className="text-gray-900 font-semibold text-lg">Enter Your Details</h4>
+      <p className="text-gray-500 text-sm leading-relaxed">
         Add your experience, education, skills, or just paste your existing resume content.
       </p>
     </div>
@@ -60,8 +60,8 @@ return(
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-white font-bold text-lg">
         2
       </div>
-      <h4 className="text-white font-semibold text-lg">Let AI Do the Work</h4>
-      <p className="text-gray-400 text-sm leading-relaxed">
+      <h4 className="text-gray-900 font-semibold text-lg">Let AI Do the Work</h4>
+      <p className="text-gray-500 text-sm leading-relaxed">
         Our AI instantly structures, rewrites, and optimizes for recruiters.
       </p>
     </div>
@@ -70,8 +70,8 @@ return(
       <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-white font-bold text-lg">
         3
       </div>
-      <h4 className="text-white font-semibold text-lg">Download & Apply</h4>
-      <p className="text-gray-400 text-sm leading-relaxed">
+      <h4 className="text-gray-900 font-semibold text-lg">Download & Apply</h4>
+      <p className="text-gray-500 text-sm leading-relaxed">
         Download your resume in PDF format.
       </p>
     </div>

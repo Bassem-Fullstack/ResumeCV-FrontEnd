@@ -12,11 +12,13 @@
 "use client"
 
 import { ArrowRight, Check, Sparkles } from "lucide-react"
+
 import { useTypewriter  , Cursor } from "react-simple-typewriter"
 
 import { motion } from "framer-motion"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import api from "@/lib/api"
 
 export default function HeroSection () {
 
@@ -37,6 +39,41 @@ deleteSpeed : 50
 
 
 const [isLogged , setLogged] = useState(false)
+
+
+
+useEffect(() => {
+
+
+const checkAuth = async()=> {
+
+try {
+
+const res = await api.post("/users/refreshToken")
+
+setLogged(res.data.accessToken)
+
+setLogged(true)
+
+}
+
+catch(err){
+
+setLogged(false)
+
+}
+
+
+
+}
+
+checkAuth()
+
+
+} , [])
+
+
+
 
 
 return (
@@ -60,6 +97,8 @@ return (
     whileHover={{ scale: 1.05 }}
 
     whileTap={{ scale: 0.97 }}
+    
+     viewport={{once : true}}
  
  > 
 
@@ -69,14 +108,16 @@ return (
   
   </motion.p>
 
-  <motion.h1 className="font-extrabold mb-5 tracking-tight leading-tight text-gray-100 text-5xl md:text-6xl"
+  <motion.h1 className="font-extrabold mb-5 tracking-tight leading-tight text-gray-900 text-5xl md:text-6xl"
   
     initial={{opacity : 0 , y : 100}}
 
    whileInView = {{ opacity : 1 , y:0 }}
 
     transition={ { duration : 0.65 , ease : "easeOut" } }
-  
+
+    viewport={{once : true}}
+
   >
     
 
@@ -84,13 +125,15 @@ return (
         
     Resume </span> <br/> In {" "} <span className="bg-gradient-to-r from-[#7c1dfb] to-[#a400d6] text-transparent bg-clip-text">{text} </span> <span>With</span> <span className="bg-gradient-to-r from-[#8722fb] to-[#bf00e2] text-transparent bg-clip-text">AI</span> </motion.h1>
 
-   <motion.p className="max-w-2xl mb-8 text-gray-400 leading-relaxed text-xl"
+   <motion.p className="max-w-2xl mb-8 text-gray-500 leading-relaxed text-xl"
    
       initial={{opacity : 0 , y : 100}}
 
       whileInView = {{ opacity : 1 , y:0 }}
 
     transition={ { duration : 0.72 , ease : "easeOut" } }
+
+    viewport={{once : true}}
 
 > 
    
@@ -106,6 +149,8 @@ return (
           whileHover={{ scale: 1.05, transition: { duration: 0.3, ease: "easeOut" } }}
 
           whileTap={{ scale: 0.97, transition: { duration: 0.3, ease: "easeOut" } }}
+
+          viewport={{once : true}}
         >
 
    <Link href={ isLogged ? "/dashboard" : "/login" }
@@ -135,13 +180,15 @@ return (
 
   </motion.div>
 
- <motion.div className="mt-10 text-gray-100 flex flex-wrap justify-center gap-x-8 gap-y-4"
+ <motion.div className="mt-10 text-gray-900 flex flex-wrap justify-center gap-x-8 gap-y-4"
  
  initial={{opacity : 0 , y : 100}}
 
   whileInView = {{ opacity : 1 , y:0 }}
 
     transition={ { duration : 0.82 , ease : "easeOut" } }
+
+    viewport={{once : true }}
  
  >
  

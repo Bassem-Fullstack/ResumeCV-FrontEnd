@@ -11,11 +11,14 @@
   "dependencies": {
     "axios": "^1.19.0",
     "framer-motion": "^13.1.0",
+    "html2canvas": "^1.4.1",
+    "jspdf": "^4.2.1",
     "lucide-react": "^1.31.0",
     "next": "16.2.1",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-simple-typewriter": "^5.0.1",
+    "react-to-pdf": "^3.2.2",
     "typewriter-effect": "^2.22.0"
   },
   "devDependencies": {

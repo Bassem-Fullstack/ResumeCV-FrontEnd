@@ -13,7 +13,7 @@ export const SecondSection = () => {
         <> 
            <div className="flex flex-col items-center my-10">
 
-        <motion.div className="flex items-center mb-5 gap-2 text-gray-100 border border-[#7c1dfb] rounded-full px-5 py-2"
+        <motion.div className="flex items-center mb-5 gap-2 text-gray-900 border border-[#7c1dfb] rounded-full px-5 py-2"
         
          initial={{opacity : 0 , y : 100}}
 
@@ -21,7 +21,7 @@ export const SecondSection = () => {
 
         transition={ { duration : 0.62 , ease : "easeOut" } }
         
-        viewport={{amount : 0.28}}
+        viewport={{amount : 0.28 , once : true }}
         
         
         >
@@ -34,7 +34,7 @@ export const SecondSection = () => {
            
         </motion.div>
 
-         <motion.div className="flex flex-col items-center gap-2 text-gray-400 px-6"
+         <motion.div className="flex flex-col items-center gap-2 text-gray-500 px-6"
          
          
           initial={{opacity : 0 , y : 100}}
@@ -43,12 +43,12 @@ export const SecondSection = () => {
 
         transition={ { duration : 0.72 , ease : "easeOut" } }
         
-        viewport={{amount : 0.3}}
+        viewport={{amount : 0.3 , once : true }}
          
          
          >
             
-           <h2 className="text-3xl font-bold text-center text-white">Build your resume</h2>
+           <h2 className="text-3xl font-bold text-center text-gray-900">Build your resume</h2>
             
             <span className="text-sm text-center leading-6"> Our streamlined process helps you create a professional <br/> resume in minutes with intelligent AI-powered tools and features .</span>
 
@@ -66,7 +66,7 @@ export const SecondSection = () => {
 
         transition={ { duration : 0.82 , ease : "easeOut" } }
         
-        viewport={{amount : 0.28}}
+        viewport={{amount : 0.28 , once : true }}
                 
                 />
 
@@ -79,7 +79,7 @@ export const SecondSection = () => {
 
            transition={ { duration : 0.86 , ease : "easeOut" } }
         
-             viewport={{amount : 0.28}}
+             viewport={{amount : 0.28 , once : true}}
                     
                     >
                     <div className={"flex items-center justify-center gap-6 max-w-md group cursor-pointer"}>

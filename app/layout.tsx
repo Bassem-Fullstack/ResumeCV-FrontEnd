@@ -1,8 +1,8 @@
-
+export const dynamic = "force-dynamic";
 
 import "./globals.css";
 
-
+import AuthCheck from "@/components/refershToken"
 
 export default function RootLayout({
   children,
@@ -14,12 +14,14 @@ export default function RootLayout({
       lang="en"
       
     >
-      <body className="bg-gray-950">
+      <body className="bg-gray-100">
 
        
+   
 
     <main>{children}</main>
 
+ 
     
 
       

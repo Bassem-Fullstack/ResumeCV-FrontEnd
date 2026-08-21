@@ -38,7 +38,7 @@ export default function Comments(){
 
     const CreateCard = ({ card}) => (
 
-        <div className="p-4 text-gray-300  rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
+        <div className="p-4 text-gray-800  rounded-lg mx-4 shadow hover:shadow-lg transition-all duration-200 w-72 shrink-0">
             <div className="flex gap-2">
                 <img className="size-11 rounded-full" src={card.image} alt="User Image" />
                 <div className="flex flex-col">
@@ -51,7 +51,7 @@ export default function Comments(){
                     <span className="text-xs text-slate-500">{card.handle}</span>
                 </div>
             </div>
-            <p className="text-sm py-4 text-gray-50">Hands down the best resume builder out there. Clean designs, quick process, and top-tier quality! ⭐⭐⭐⭐⭐</p>
+            <p className="text-sm py-4 text-gray-900">Hands down the best resume builder out there. Clean designs, quick process, and top-tier quality! ⭐⭐⭐⭐⭐</p>
             <div className="flex items-center justify-between text-slate-500 text-xs">
                 <div className="flex items-center gap-1">
                     <span>Posted on</span>
@@ -69,7 +69,7 @@ export default function Comments(){
     return (
         <> 
            <section className="flex flex-col items-center justify-center w-full pt-20">
-          <motion.div className="flex items-center text-center gap-2 text-sm  bg-blue-800/10 border border-gray-50 rounded-full px-4 py-1"
+          <motion.div className="flex items-center text-center gap-2 text-sm   border border-gray-50 rounded-full px-4 py-1"
           
         
             initial={{opacity : 0 , y : 100}}
@@ -78,8 +78,8 @@ export default function Comments(){
 
            transition={ { duration : 0.62 , ease : "easeOut" } }
         
-           viewport={{amount : 0.28}}
-
+           viewport={{amount : 0.28 , once : true}}
+           
           
           >
 
@@ -90,7 +90,7 @@ export default function Comments(){
                     stroke="#1E4BAF" strokeMiterlimit="5.759" strokeLinecap="round" />
             </svg>
 
-            <span className="bg-gradient-to-r from-[#bf00e2] text-xl to-[#f9782c] text-transparent bg-clip-text text-center"> Our Customers Comments</span>
+            <span className="bg-gradient-to-r from-[#bf00e2] to-[#f9782c] text-2xl font-medium text-transparent bg-clip-text"> Our Customers Comments</span>
 
         </motion.div>
 

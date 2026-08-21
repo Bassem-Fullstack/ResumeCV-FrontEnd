@@ -6,7 +6,6 @@ import HeroSection from "@/components/heroSection";
 
 import Navbar from "@/components/Navbar";
 
-import  AuthCheck from "@/components/refershToken";
 
 export default function Home() {
   
@@ -15,8 +14,8 @@ return (
 
 <>
     
- <AuthCheck>
 
+<div>
  <Navbar/>
 
   <HeroSection/>
@@ -26,8 +25,9 @@ return (
    <ResumWorks/>
 
      <Comments/>
+     
+</div>
 
-    </AuthCheck>
   
 </>
     

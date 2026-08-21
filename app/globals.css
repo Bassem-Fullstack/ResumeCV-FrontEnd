@@ -4,8 +4,76 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    font-family: 'Inter', sans-serif;
+@media print {
+  /* 1. إخفاء وإلغاء أي ألوان خلفية للمستند بالكامل */
+  html, body {
+    background: white !important;
+    background-color: white !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
+
+  /* 2. ضبط هوامش الورقة */
+  @page {
+    size: A4 portrait;
+    margin: 0; /* صفحة كاملة بيضاء بدون هوامش متصفح رمادية */
+  }
+
+  /* 3. إخفاء كافة الحاويات العلوية أو الحواف الخارجية */
+  .min-h-screen {
+    background: white !important;
+    padding: 0 !important;
+  }
+
+  /* 4. ضبط الـ CV ليملأ الورقة بأسلوب نظيف ورسمي */
+  .cv-template {
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: 297mm !important;
+    height: auto !important;
+    min-height: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 auto !important;
+    background-color: white !important;
+    
+    /* هوامش داخلية متناسقة للـ CV من الداخل فقط */
+    padding-top: 1cm !important;
+    padding-bottom: 0.6cm !important;
+    padding-left: 0.8cm !important;
+    padding-right: 0.8cm !important;
+    
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+
+  .cv-section {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  /* 5. أحجام النصوص والمسافات الداخلية */
+  .cv-template h1 { 
+    font-size: 1.6rem !important; 
+    margin-bottom: 6px !important; 
+  }
+  .cv-template h2 { 
+    font-size: 1rem !important; 
+    margin-top: 10px !important; 
+    padding-bottom: 3px !important; 
+  }
+  .cv-template p, .cv-template span, .cv-template div { 
+    font-size: 0.83rem !important; 
+    line-height: 1.35 !important; 
+  }
+  
+  .cv-template .mt-7 { margin-top: 17px !important; }
+  .cv-template .mb-6 { margin-bottom: 17px !important; }
+  .cv-template .pb-6 { padding-bottom: 10px !important; }
+  .cv-template .space-y-6 > * + * { margin-top: 18px !important; }
+  .cv-template .space-y-3 > * + * { margin-top: 4px !important; }
+  .cv-template .space-y-2 > * + * { margin-top: 3px !important; }
 }
