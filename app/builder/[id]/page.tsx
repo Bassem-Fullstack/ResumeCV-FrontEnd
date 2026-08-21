@@ -884,7 +884,7 @@ return(
       Education
     </h2>
 
-    <div className="space-y-3 pt-1">
+    <div className="space-y-3 ">
       {cv.generatedContent.education.map((educ: any, index: number) => (
         <div key={index} className="text-sm">
           {editCV ? (
@@ -946,7 +946,7 @@ return(
       Languages
     </h2>
 
-    <div className="flex flex-col gap-2 p-1">
+    <div className="flex flex-col gap-2 ">
       {cv.generatedContent.languages.map((lang: any, i: number) => (
         <div key={i}>
           {editCV ? (
