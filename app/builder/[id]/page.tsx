@@ -431,7 +431,7 @@ return(
   <div className="min-h-screen bg-gray-100 p-3 sm:p-6 md:p-10">
 
 
- <div className="max-w-3xl mx-auto flex justify-end gap-3 mb-4 print:hidden"> 
+ <div className="max-w-[794px] flex flex-wrap items-center justify-end gap-2.5 mb-4 print:hidden"> 
 
 
 
@@ -547,9 +547,9 @@ return(
 
 
   
- <div className="w-full overflow-x-auto pb-6">
+ <div className="w-full flex justify-center pb-6">
     
-   <motion.div className="cv-template  w-[794px] min-h-[1123px] print:min-h-0 bg-white p-8 sm:p-10 mx-auto shadow-lg border border-gray-300 shrink-0"
+   <motion.div className="cv-template w-full max-w-[794px] min-h-auto print:min-h-0 bg-white p-4 sm:p-8 mx-auto shadow-lg border sm:rounded-none rounded-lg border-gray-300"
    
      initial={{opacity : 0 , x : 100}}
 
@@ -729,7 +729,7 @@ return(
 
          <div className="space-y-2 p-3 bg-gray-50 border border-gray-300 rounded">
 
-         <div className="flex gap-2">
+         <div className="flex flex-col sm:flex-row flex-wrap gap-2">
 
           <input
          
