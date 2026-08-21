@@ -85,7 +85,7 @@ await api.delete("/users/logout")
 
 setAccessToken(null) 
 
-router.push("/login")
+router.push("/")
 
 }
 

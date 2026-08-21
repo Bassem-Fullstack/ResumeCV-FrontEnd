@@ -31,7 +31,7 @@ router.push("/dashboard")
 
 catch(err){
 
-router.push("/")
+router.push("/login")
 
 }
 
@@ -43,7 +43,7 @@ return (
 
 <>
 
-<header className="w-full  shadow-md">
+<header className="w-full shadow-md">
 
 <motion.nav className="max-w-[1600px] mx-auto flex items-center justify-between lg:px-16 lg:py-4 md:px-12 sm:px-6 px-4 py-2.5"
 
