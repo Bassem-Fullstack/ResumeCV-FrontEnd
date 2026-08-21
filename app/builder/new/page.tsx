@@ -482,7 +482,7 @@ return(
 
 <AuthCheck>
 
-    <div className="w-full mb-16 bg-gradient-to-r from-purple-600 to-orange-300">
+    <div className="w-full mb-16 bg-gradient-to-r from-purple-600 to-orange-300 overflow-hidden">
 
      <motion.nav className="flex items-center justify-between max-w-7xl mx-auto px-4 md:px-12 py-3.5 text-slate-800 transition-colors"
      
@@ -499,16 +499,16 @@ return(
 
       <div className="flex items-center">
 
-       <Image className="w-auto h-10 bg-white rounded-md" height={48} width={300} alt="logo" src={"/logo4.webp"} />
+       <Image className="w-auto h-9 sm:h-10 object-contain bg-white rounded-md" height={48} width={300} alt="logo" src={"/logo4.webp"} />
 
       </div>
 
-    <div className="flex items-center gap-4">
+    <div className="flex items-center gap-2 sm:gap-4">
 
 
        <p className="text-md font-bold text-gray-100"> Hi , <span className="text-gray-800">{userName} </span></p>
        
-       <button onClick={handleLogout} className="bg-red-600 hover:bg-red-700 text-gray-100 transition-all  px-7 py-1.5 rounded-full ">
+       <button onClick={handleLogout} className="bg-red-600 hover:bg-red-700 text-gray-100 transition-all px-4 sm:px-7 py-1.5 rounded-full ">
 
         Logout
        </button>
@@ -807,7 +807,7 @@ placeholder="Degree / Qualification (e.g., Computer Science, Technical Diploma, 
   <h2 className="font-semibold px-3 mt-5 text-gray-200 mb-2">Languages</h2>
 
   {formDate.languages.map((lang, i) => (
-    <div key={i} className="flex gap-3 mb-3">
+    <div key={i} className="flex flex-col sm:flex-row gap-3 mb-3">
       <input
         value={lang.name}
         onChange={(e) => handleLanguageChange("name", i, e.target.value)}
